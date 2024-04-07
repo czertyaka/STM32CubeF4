@@ -34,10 +34,11 @@ target_sources(cmsis PRIVATE
 )
 target_sources(cmsis PUBLIC
     FILE_SET HEADERS BASE_DIRS "${CMSIS_INCLUDE_DIR}"
-    FILES "${CMSIS_INCLUDE_DIR}/core_cm3.h"
+    FILES "${CMSIS_INCLUDE_DIR}/core_cm4.h"
     FILES "${CMSIS_INCLUDE_DIR}/cmsis_version.h"
     FILES "${CMSIS_INCLUDE_DIR}/cmsis_compiler.h"
     FILES "${CMSIS_INCLUDE_DIR}/cmsis_gcc.h"
+    FILES "${CMSIS_INCLUDE_DIR}/mpu_armv7.h"
 )
 string(TOLOWER "${BOARD_TARGET}.h" BOARD_TARGET_HEADER)
 target_sources(cmsis PUBLIC
